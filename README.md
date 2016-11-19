@@ -3,6 +3,8 @@ By Samuel Bodin, Rickard Lundberg, Joel Söderman and Pontus Wedén
 
 Done as a project in the course "DVA231 Utveckling av webbapplikationer" at Mälardalens Högskola in october 2016. 
 
+![Image of web site](https://github.com/deerel/xdo-webplanner/blob/master/screenshot-frontpage-desktop.png)
+
 ##DVA231 Syllabus 
 (in swedish, from mdh.se):
 ###Syfte
