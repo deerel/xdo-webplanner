@@ -3,7 +3,7 @@ return [
 	
 	'app' => [
 		'name'			=> 'Xdo',
-		'domain'		=> 'http://xdo.se',
+		'domain'		=> 'http://YOURDOMAIN',
 		'debug'	 		=> true,
 		'maintenance' 	=> false,
 	],
@@ -17,9 +17,9 @@ return [
 	],
 	
 	'database' => [
-		'user' 			=> 'u_xdo',
-		'password' 		=> 'ba9360c05632efe5c1bc633701b8a561',
-		'name' 			=> 'xdo',
+		'user' 			=> 'USER',
+		'password' 		=> 'PASS',
+		'name' 			=> 'DBNAME',
 		'connection' 	=> 'mysql:host=127.0.0.1',
 		'options'		=> [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
