@@ -1,0 +1,213 @@
+#planner {
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+}
+#planner[data-mode="month"] {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 5px;
+	width: 100%;
+}
+#planner[data-mode="week"] {
+	margin: 0 auto;
+	width: 90%;
+	min-width: 760px;
+}
+#plannerHeader {
+	padding:15px 0;
+	text-align: center;
+}
+#plannerHeader #plannerMonth {
+	font-wight: 400;
+	font-size: 1.3em;
+}
+#plannerHeader #plannerWeek {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.1em;
+	font-wight: 400;
+}
+#plannerMain {
+	clear: both;
+	height: 50em;
+	position: relative;
+}
+#plannerSidebar {
+	float: left;
+	border:1px solid #eee;
+	background: #fff;
+	height: 100%;
+	width: 60px;
+}
+#plannerSidebar .time-cell 
+{
+	float: left;
+	clear: left;
+	color: #a0a0a0;
+	vertical-align: center;
+	border-bottom: 1px solid #eee;
+	height: 33.32px;
+	font-size: 0.7em;
+	padding: 0 15px;
+}
+#plannerWeekDays {
+	float: right;
+	width: calc(100% - 60px);
+}
+#plannerWeekDays .weekday, #plannerMonthDays .weekday {
+	background-color: #fff !important;
+	color: #737373;
+	border-bottom: 1px solid #bbb;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	padding: 8px 0;
+	text-align: center;
+}
+.weekday.today:before {
+	display: block;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	content:"";
+	background-color: rgba(204, 255, 204, .2);
+	position: absolute;
+}
+#plannerContent {
+	height: 100%;
+	float: left;
+	width: calc(100% - 60px);
+	position: relative;
+}
+#planner .weekday {
+	position: relative;
+	float: left;
+	border-right: 1px solid #eee;
+	background-color: transparent;
+	height: 100%;
+	width: 14.2857%;
+}
+#plannerContent .cell {
+	width: 100%;
+	background: #fff;
+	border: 0;
+}
+#plannerContent .cell:nth-child(4n+1)
+{
+	border-top:1px solid #eee;
+}
+
+#plannerContent .inner {
+	width: 100%;
+	height: 100%;
+	z-index: 98;
+}
+#plannerContent .textBox {
+	color:#fff;
+	height: 100%;
+	padding: 4px;
+	font-size: 0.8em;
+	position: relative;
+}
+#plannerContent .textBox .title {
+	font-weight: bold;
+} 
+#plannerContent .textBox .timestamp {
+	position: absolute;
+	bottom: 2px;
+	font-size:0.8em;
+	font-weight: bold;
+	right: 5px;
+}
+#plannerContent .stretchable {
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	top: 0;
+	cursor: n-resize;
+	z-index: 99;
+	background-color:inherit;
+}
+#plannerContent .stretchable:last-child {
+	bottom: 0;
+	top: auto;
+}
+#plannerContent .activity {
+	position: absolute;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 10px;
+	background-color: transparent;
+}
+#plannerContent .activity.selected {
+	opacity: 0.7;
+}
+#plannerContent .owner {
+	background-color: rgba(46, 88, 107, 0.8); /*#a7394e*/
+}
+#plannerContent .invited {
+	background-color: rgba(11, 148, 129, 0.8);/*#2c596d*/
+}
+
+#plannerMonthGrid {
+	background-color: #fff;
+}
+#planner .dayBox {
+	border-bottom: 1px solid #eee;
+	color: #a0a0a0;
+	float: left;
+	font-size: 0.75em;
+	height: 14vw;
+	max-height: 100px;
+	padding: 2px;
+	position: relative;
+	width: 14.2857%;
+}
+.dayBox:not(.deadDay) {
+	cursor: pointer;
+}
+#planner .dayBox + .dayBox {
+	border-left: 1px solid #eee;
+}
+#planner .dayBox.isClicked:after {
+	background-color: rgba(204, 239, 255, .2) !important;
+	content: "";
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+#planner .dayBox.hasActivity {
+	background-color: #82aabd;
+	color:#fff;
+}
+#plannerMonthDayInfo {
+	margin-top: 20px;
+	clear: both;
+	background-color: #fff;
+}
+#planner[data-mode="month"] .isToday {
+	color: #333 !important;
+	font-weight: 700;
+}
+#planner[data-mode="month"] .activity {
+	clear: both;
+	padding: 10px;
+	cursor: pointer;
+	border-top: 1px solid #f1f1f1;
+}
+#planner[data-mode="month"] .activity:hover {
+	background: rgba(181, 217, 234, .2);
+}
+#planner[data-mode="month"] .monthTimestamp {
+	color: #34495e;
+	font-size: 1.2em;
+}
+#planner[data-mode="month"] .monthTitle {
+	font-size: 0.9em;
+	color: #333;
+	margin-top: 10px;
+}
